@@ -1,0 +1,52 @@
+/* Minimalist CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background: #1b1b1b;
+    color: #e4dbdb;
+    height: 100vh;
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', monospace;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+.container{
+    
+}
+.element-animate {
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    position: relative;
+    transition: 
+    border-radius 1s ease,
+    background-color 1s ease;
+    transition-behavior: allow-discrete;
+    
+}
+
+.element-animate:hover {
+    border-radius: 50%;
+    background-color: yellowgreen;
+    
+}
+
+.element-animate:hover::after {
+    transition: opacity 5s;
+    content: "Hola";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
